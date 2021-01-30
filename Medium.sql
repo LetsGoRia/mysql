@@ -1,5 +1,7 @@
+-- Use Database
 USE Challenges;
 
+-- Create Table
 CREATE TABLE top_movies (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR (220),
@@ -7,6 +9,7 @@ CREATE TABLE top_movies (
     rating DECIMAL (2, 1)
 );
 
+-- Insert Data into table
 INSERT INTO top_movies (title, release_date, rating)
 VALUES 
 ("The Godfather", "1972-03-24", 9.2),
@@ -20,6 +23,7 @@ VALUES
 ("Forrest Gump", "1994-07-06", 8.8),
 ("Avengers: Age of Ultron", "2015-05-1", 7.3);
 
+-- Display all data sorted in descending order within Table where the title contains the letter s
 SELECT * FROM top_movies
 WHERE title LIKE "%s%"
 ORDER BY release_date DESC;

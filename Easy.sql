@@ -1,7 +1,7 @@
-CREATE DATABASE Challenges;
-
+-- Use Database
 USE Challenges;
 
+-- Create Table
 CREATE TABLE books (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	title VARCHAR (100),
@@ -10,20 +10,15 @@ CREATE TABLE books (
     author_lastName VARCHAR (20)
 );
 
+-- Insert Data into table
 INSERT INTO books (title, publish_date, author_firstName, author_lastName)
 VALUES ("Harry Potter and the Chamber of Secrets", "1998-07-02", "J.K", "Rowling"), ("Rich Dad Poor Dad", "1997-04-01", "Robert", "Kiyosaki");
 
 
-
-SELECT * FROM books
-ORDER BY publish_date;
-
+-- Deletes Rich Dad Poor Dad as it's the oldest book
 DELETE FROM books 
 WHERE title = "Rich Dad Poor Dad";
 
-
-SELECT * FROM books;
-
-SELECT COUNT (title) 
-FROM books
-WHERE author_firstName = "J.K";
+-- Returns count for the number of books entered by the title
+SELECT COUNT(*) AS Sum
+FROM books;
