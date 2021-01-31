@@ -12,13 +12,17 @@ CREATE TABLE books (
 
 -- Insert Data into table
 INSERT INTO books (title, publish_date, author_firstName, author_lastName)
-VALUES ("Harry Potter and the Chamber of Secrets", "1998-07-02", "J.K", "Rowling"), ("Rich Dad Poor Dad", "1997-04-01", "Robert", "Kiyosaki");
+VALUES ("Harry Potter and the Chamber of Secrets", "2018-07-02", "J.K", "Rowling"), ("Rich Dad Poor Dad", "1995-04-01", "Robert", "Kiyosaki");
 
 
--- Deletes Rich Dad Poor Dad as it's the oldest book
-DELETE FROM books 
-WHERE title = "Rich Dad Poor Dad";
+-- Deletes Rich Dad Poor Dad as it's the oldest book by sorting the table then removing one item
+DELETE FROM books
+ORDER BY publish_date
+LIMIT 1;
 
 -- Returns count for the number of books entered by the title
 SELECT COUNT(*) AS Sum
 FROM books;
+
+
+
