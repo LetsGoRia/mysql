@@ -1,9 +1,6 @@
 -- Use Database
 USE Challenges;
 
-DROP TABLE cars;
-SELECT * FROM cars;
-
 -- Create Table within Database with 4 columns. ID will update automatically
 CREATE TABLE cars (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
