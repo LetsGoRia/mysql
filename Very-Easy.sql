@@ -1,6 +1,3 @@
--- Create Database
-CREATE DATABASE Challenges;
-
 -- Use Database
 USE Challenges;
 
